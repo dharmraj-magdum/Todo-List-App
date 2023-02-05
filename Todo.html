@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  -->
+    <link rel="stylesheet" href="Todo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1826d4486b.js" crossorigin="anonymous"></script>
+    <script src="Todo.js" defer></script>
+    <!--  -->
+    <title>TODO LIST</title>
+</head>
+
+<body>
+    <section id="main-container">
+        <nav id="navbar">
+            <h1>TODO List</h1>
+            <div class="additem" onclick="openForm(this)">
+                <i class="fa-solid fa-circle-plus"></i>
+                <p>Add Item</p>
+            </div>
+        </nav>
+        <section id="grid">
+            <div name="empty" class="empty">
+                There are no current To Do Item
+            </div>
+            <!-- <div class="card">
+                <h4 class="title">Krishna River side </h4>
+                <ul class="tasklist">
+                    <li>
+                        walk
+                        <button onclick="markDone(this)">Mark Done</button>
+                    </li>
+                    <li>
+                        talk
+                        <button onclick="markDone(this)">Mark Done</button>
+                    </li>
+                    <li>
+                        swim
+                        <button onclick="markDone(this)">Mark Done</button>
+                    </li>
+                </ul>
+                <i class="fa-solid fa-trash-can can" onclick="deleteItem(this)"></i>
+                <i class="fa-solid fa-circle-plus addtask" onclick="openForm(this)"></i>
+            </div> -->
+        </section>
+    </section>
+    <div>
+        <form class="todoform" id="todoform" onsubmit="return false;">
+            <label for="todo">Add To Do Item</label>
+            <input id="todo" name="todo" type="text" placeholder="trip to USA">
+            <div class="action">
+                <button onclick="addTodoItem()">Add</button>
+                <button onclick="closeForm()">Close</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
